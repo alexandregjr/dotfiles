@@ -2,7 +2,7 @@ cd dots/
 
 dotDir=$(pwd)
 
-for file in $(ls); do 
+for file in $(ls); do
     dest="$HOME/.$file"
     bkp=$(date +%Y-%m-%d-%H%M)
 

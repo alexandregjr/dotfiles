@@ -1,91 +1,61 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" GOOGLE-CODE-FORMAT
-" Add maktaba and codefmt to the runtimepath.
-" (The latter must be installed before it can be used.)
-Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmt'
-" Also add Glaive, which is used to configure codefmt's maktaba flags. See
-" `:help :Glaive` for usage.
-Plugin 'google/vim-glaive'
-
-Plugin 'gruvbox-community/gruvbox'
-
-" TSX, JSX files
-Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript'
-call vundle#end()            " required
-
-call glaive#Install()
-
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-augroup autoformat_settings
-  autocmd FileType bzl AutoFormatBuffer buildifier
-  autocmd FileType c,cpp,proto,arduino AutoFormatBuffer clang-format
-  autocmd FileType dart AutoFormatBuffer dartfmt
-  autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType gn AutoFormatBuffer gn
-  autocmd FileType html,less,json AutoFormatBuffer js-beautify
-  autocmd FileType java AutoFormatBuffer google-java-format
-  autocmd FileType python AutoFormatBuffer yapf
-  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
-  autocmd FileType rust AutoFormatBuffer rustfmt
-  autocmd FileType vue,css,sass,scss,typescript,typescriptreact,javascript AutoFormatBuffer prettier
-augroup END
-
-" set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-
 syntax on
 
-set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set nu
-set nowrap
-set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
+set exrc
 set guicursor=
 
-set scrolloff=8
 set relativenumber
+set nu
+
+set nohlsearch
+set incsearch
+
+set noerrorbells
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+
+set expandtab
+set smartindent
+set nowrap
+set noswapfile
+set nobackup
+
+set undodir=~/.vim/undodir
+set undofile
+
+set scrolloff=8
+
 set hidden
+set cmdheight=2
+
 set signcolumn=yes
-set cmdheight=1
-
 set colorcolumn=80
-" highlight ColorColumn ctermbg=0 guibg=lightgray
 
-set termguicolors
+set shortmess+=c
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+" colorscheme
+Plug 'gruvbox-community/gruvbox'
+
+" file autoformatter
+Plug 'Chiel92/vim-autoformat'
+
+" typescript & .jsx, .tsx syntax
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
+call plug#end()
+
+" autoformat on save
+au BufWrite * :Autoformat
+
+" set file .tsx, .jsx to typescriptreact filetype
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+" create autoformatter for typescriptreact filetype
+let g:formatters_typescriptreact = ['prettier']
 
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_italic=1
 colorscheme gruvbox
-
-" let g:lightline = {'colorscheme' : 'horizon'}

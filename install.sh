@@ -5,4 +5,3 @@ sudo apt upgrade -y
 
 ./scripts/programs.sh
 ./scripts/link.sh
-./scripts/vundle.sh
