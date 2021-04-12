@@ -28,7 +28,7 @@ URxvt.clipboard.autocopy: true
 
 ! special
 *.foreground:   #a8a19f
-*.background:   #1b1918
+*.background:   #151620
 *.cursorColor:  #a8a19f
 
 ! black

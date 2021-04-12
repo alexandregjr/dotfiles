@@ -24,6 +24,7 @@ install rxvt-unicode-256color
 install clang
 install clang-format
 install curl
+install unzip
 
 ./scripts/node.sh
 ./scripts/vimplug.sh
