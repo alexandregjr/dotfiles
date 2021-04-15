@@ -61,7 +61,7 @@ update_rate() {
 
     local interval=$(( $time - $last_time ))
     if [ $interval -gt 0 ]; then
-        rate="download $(readable $(( (rx - last_rx) / interval ))) upload $(readable $(( (tx - last_tx) / interval )))"
+        rate=" $(readable $(( (rx - last_rx) / interval )))  $(readable $(( (tx - last_tx) / interval )))"
     else
         rate=""
     fi
