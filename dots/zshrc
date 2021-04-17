@@ -1,0 +1,18 @@
+# Created by newuser for 5.8
+
+source ~/.antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme denysdovhan/spaceship-prompt
+
+antigen apply
+
+
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    startx
+fi

@@ -17,7 +17,10 @@ function node {
     which node &> /dev/null
 
     if [ $? -ne 0 ]; then
+        echo "Installing: node..."
         ./scripts/node.sh
+    else
+        echo "Already installed: node"
     fi
 }
 
@@ -44,6 +47,7 @@ install clang
 install clang-format
 install curl
 install unzip
+install zsh
 
 node
 

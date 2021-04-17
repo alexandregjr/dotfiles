@@ -1,5 +1,5 @@
 !--------------------xdefauls
-URxvt.font: xft:Fira Mono for Powerline:pixelsize=14
+URxvt.font: xft:Fira Code:pixelsize=14
 urxvt*termName: rxvt-256color
 urxvt*scrollBar: false
 urxvt*matcher.button: 1
