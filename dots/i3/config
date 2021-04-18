@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:Fira Mono for Powerline 10
-font pango:Noto Mono 10
+font pango:Fira Code 10
 
 #font pango:monospace 12
 
@@ -191,7 +191,7 @@ bar {
                 urgent_workspace #edf2f4 #edf2f4 #2b2d42
         }
     separator_symbol " "
-        font pango:Noto Mono, Font Awesome 5 Free Solid 10
+        font pango:Fira Code, Font Awesome 5 Free Solid 10
 }
 
 # class                 border  backgr. text    indicator

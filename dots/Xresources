@@ -12,7 +12,7 @@ Xft*hintstyle: hintfull
 URxvt*cursorUnderline:  true
 Xft*rgba: rgb
 URxvt*geometry: 85x20
-*internalBorder: 5
+*internalBorder: 8
 URxvt*fading: 0
 URxvt*tintColor: #ffffff
 URxvt*shading: 0
