@@ -13,7 +13,7 @@ function install {
     fi
 }
 
-function node {
+function install_latest_node {
     which node &> /dev/null
 
     if [ $? -ne 0 ]; then
@@ -24,7 +24,22 @@ function node {
     fi
 }
 
-function install_node {
+function install_latest_go {
+    which go &> /dev/null
+
+    if [ $? -ne 0 ]; then
+        latest="$(curl https://golang.org/VERSION?m=text)"
+        echo "Downloading latest go: $latest"
+        wget --no-check-certificate --continue --show-progress "https://golang.org/dl/$latest.linux-amd64.tar.gz"
+        echo "Installing $latest"
+        rm -rf /usr/local/go && tar -C /usr/local -xzf "$latest.linux-amd64.tar.gz"
+        rm "$latest.linux-amd64.tar.gz"
+    else
+        echo "Already installed: go"
+    fi
+}
+
+function node_install {
     which $1 &> /dev/null
     if [ $? -ne 0 ]; then
         echo "Installing: ${1}..."
@@ -48,10 +63,16 @@ install clang-format
 install curl
 install unzip
 install zsh
+install python3
+install python3-pip
 
-node
+install_latest_node
 
-install_node prettier
-install_node expo-cli
+node_install prettier
+node_install expo-cli
+
+install_latest_go
+
+go get github.com/tsoding/snitch
 
 ./scripts/vimplug.sh
