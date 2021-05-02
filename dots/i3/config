@@ -209,5 +209,8 @@ focus_follows_mouse no
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb '#151620' -nf '#edf2f4' -sb '#d90429' -sf '#151620'
 
+# take screenshot
+bindsym Print exec flameshot gui
+
 # Suspend
 bindsym $mod+Shift+period exec systemctl suspend

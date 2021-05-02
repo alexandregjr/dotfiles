@@ -68,6 +68,7 @@ install python3-pip
 install python3-autopep8
 install network-manager
 install rfkill
+install flameshot
 
 install_latest_node
 
