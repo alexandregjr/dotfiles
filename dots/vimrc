@@ -57,6 +57,9 @@ Plug 'peitalin/vim-jsx-typescript'
 " Git integration
 Plug 'airblade/vim-gitgutter'
 
+" Syntax Highlighting
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
 
 let mapleader = " "
