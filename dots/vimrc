@@ -60,11 +60,14 @@ Plug 'airblade/vim-gitgutter'
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 
+" Filesystem
+Plug 'preservim/nerdtree'
 call plug#end()
 
 let mapleader = " "
 " mapping autoformat
 nnoremap <leader>ff :Autoformat<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " set file .tsx, .jsx to typescriptreact filetype
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
