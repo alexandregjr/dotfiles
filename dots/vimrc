@@ -67,7 +67,15 @@ call plug#end()
 let mapleader = " "
 " mapping autoformat
 nnoremap <leader>ff :Autoformat<CR>
+
+" mapping nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
+
+" mapping movement between splits
+nnoremap <leader>sh <C-W><C-h>
+nnoremap <leader>sj <C-W><C-j>
+nnoremap <leader>sk <C-W><C-k>
+nnoremap <leader>sl <C-W><C-l>
 
 " set file .tsx, .jsx to typescriptreact filetype
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
