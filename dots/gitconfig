@@ -1,3 +1,9 @@
 [user]
 	email = alexgalocha.jr@gmail.com
 	name = alexandregjr
+
+[includeIf "gitdir:~/ambar/"]
+	path = ~/ambar/.gitconfig
+
+[core]
+	editor = vim
