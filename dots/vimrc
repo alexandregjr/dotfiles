@@ -39,6 +39,9 @@ set shortmess+=c
 set laststatus=2
 set noshowmode
 
+" TODO(#1): Search for plugin like LiveShare in VSCode 
+"  Maybe a good soul made such plugin already, if not, a great project :)
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 " colorscheme
