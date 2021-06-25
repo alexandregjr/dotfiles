@@ -69,6 +69,7 @@ install python3-autopep8
 install network-manager
 install rfkill
 install flameshot
+install ttf-mscorefonts-installer
 
 install_latest_node
 
