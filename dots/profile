@@ -26,5 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+export TERM=rxvt-unicode
 export PATH=$PATH:/usr/local/go/bin
 export SHELL=`which zsh`

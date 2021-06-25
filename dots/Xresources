@@ -1,10 +1,9 @@
 !--------------------xdefauls
 URxvt.font: xft:Fira Code:pixelsize=14
-urxvt*termName: rxvt-256color
+URxvt.boldFont: xft:Fira Code:bold:pixelsize=14
 urxvt*scrollBar: false
 urxvt*matcher.button: 1
 urxvt.transparent: false
-urxvt.boldFont:
 Xft*dpi: 96
 Xft*antialias: true
 Xft*hinting: true
@@ -19,6 +18,7 @@ URxvt*shading: 0
 URxvt*inheritPixmap: False
 URxvt.scrollBar: False
 URxvt.letterSpace: -1
+urxvt*termName: rxvt-unicode
 
 ! Copy-Paste
 URxvt.iso14755: false
