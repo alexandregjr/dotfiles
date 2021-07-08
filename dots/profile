@@ -27,5 +27,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export TERM=rxvt-unicode
+export BROWSER=chromium
 export PATH=$PATH:/usr/local/go/bin
 export SHELL=`which zsh`

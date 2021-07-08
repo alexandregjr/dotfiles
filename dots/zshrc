@@ -18,4 +18,4 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 fi
 
 export PATH=$PATH:/usr/local/go/bin:~/go/bin
-
+export BROWSER=chromium
